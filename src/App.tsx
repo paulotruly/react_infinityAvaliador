@@ -1,12 +1,14 @@
-import './index.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 
 function App() {
-
   return (
-    <div className="min-h-screen text-white bg-red-500 flex justify-center items-center">
-      <h1 className="text-4xl font-semibold">Tailwind está funcionando!</h1>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App

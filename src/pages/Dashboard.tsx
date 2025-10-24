@@ -50,24 +50,24 @@ function Dashboard() {
             <div className="flex flex-col col-span-1 w-full h-auto px-6">
                 <h4 className="pb-4 pt-12 text-white font-bold bg-gray-800"> Filtros </h4>
                 <div className="flex flex-col gap-6 mt-6">
-                    <select name="seletor" id="seletor" className="w-full p-1 rounded-lg">
+                    <select name="seletor" id="seletor" className="w-full p-2 rounded-lg border-white text-white bg-white/10">
                         <option value="" disabled selected> Monitor </option>
                         <option value="opcao1"> Opção 1 </option>
                     </select>
 
-                    <select name="seletor" id="seletor" className="w-full p-1 rounded-lg">
+                    <select name="seletor" id="seletor" className="w-full p-2 rounded-lg border-white text-white bg-white/10">
                         <option value="" disabled selected> Unidade </option>
                         <option value="opcao1"> Opção 1 </option>
                     </select>
 
-                    <select name="seletor" id="seletor" className="w-full p-1 rounded-lg">
-                        <option value="" disabled selected> Data </option>
-                        <option value="opcao1"> Opção 1 </option>
+                    <select name="seletor" id="seletor" className="w-full p-2 rounded-lg border-white text-white bg-white/10">
+                        <option value="" className="text-black" disabled selected> Data </option>
+                        <option value="opcao1" className="text-black"> Opção 1 </option>
                     </select>
 
                     <div className="flex flex-row justify-between">
-                        <button className="text-gray-100 bg-gray-500 py-4 px-8 rounded-full"> Filtrar </button>
-                        <button className="text-gray-400 bg-gray-700 py-4 px-8 rounded-full"> Limpar filtros </button>
+                        <button className="text-gray-100 bg-gray-500 py-4 px-8 rounded-lg"> Filtrar </button>
+                        <button className="text-gray-400 bg-gray-700 py-4 px-8 rounded-lg"> Limpar filtros </button>
                     </div>
                 </div>
             </div>

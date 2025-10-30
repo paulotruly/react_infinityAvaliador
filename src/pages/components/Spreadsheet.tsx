@@ -4,12 +4,12 @@ function Spreadsheet() {
 
   return (
 
-    <div className="col-span-3 bg-blue-800">
+    <div className="p-4 ml-2 col-span-3 min-h-screen bg-gray-800">
 
       <Filter></Filter>
 
       {/* TABELA */}
-      <div className="flex flex-col col-span-3 py-6 h-full">
+      <div className="flex flex-col col-span-3 p2-6 h-full">
           <table className="text-white">
             <thead>
               <tr className="border-b border-gray-500">

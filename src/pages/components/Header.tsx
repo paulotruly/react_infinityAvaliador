@@ -20,16 +20,22 @@ function Header() {
 
         <div className="mt-10 ml-2">
           <p className="text-[12px] text-white/70"> Principal </p>
+
           <nav className="flex flex-col mt-4 font-bold gap-2 text-white">
-            <div className="flex flex-row">
-              <DashboardLogo></DashboardLogo>
+            
+            {/* === COLOCAR HOVER AQUI E ACHAR MAIS LOGOS === */}
+            <div className="group flex flex-row group-hover:">
+              <DashboardLogo fillColor="white"></DashboardLogo>
               <a href="" className="flex justify-center items-center"> Dashboard </a>
             </div>
-            <div className="flex flex-row">
-              <DashboardLogo></DashboardLogo>
+
+            <div className="flex flex-row group-hover:">
+              <DashboardLogo fillColor="white"></DashboardLogo>
               <a href="" className="flex justify-center items-center"> Dashboard </a>
             </div>
+
           </nav>
+
         </div>
 
     </div>

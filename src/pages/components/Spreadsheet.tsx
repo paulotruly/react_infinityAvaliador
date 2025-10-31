@@ -5,7 +5,7 @@ function Spreadsheet() {
 
   return (
 
-    <div className="p-4 col-span-3 min-h-screen bg-gray-800">
+    <div className="p-4 col-span-4 min-h-screen bg-gray-800">
     
       <Filter></Filter>
 

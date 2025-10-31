@@ -1,4 +1,5 @@
 import Filter from "./Filter";
+import SpreadsheetRow from "./SpreadsheetRow";
 
 function Spreadsheet() {
 
@@ -22,28 +23,11 @@ function Spreadsheet() {
             </thead>
             
             <tbody>
-              <tr className="border-b border-gray-500">
-                {/* aluno */}
-                <td className="px-6 py-6 text-gray-400 bg-gray-700">
-                  Nome do aluno
-                </td>
-                {/* aluno */}
-                <td className="px-6 py-6 text-gray-400 bg-gray-700">
-                  8190000-0000
-                </td>
-                {/* monitor */}
-                <td className="px-6 py-6 text-gray-400 bg-gray-700">
-                  Nome do monitor
-                </td>
-                {/* avaliação */}
-                <td className="px-6 py-6 text-gray-400 bg-gray-700">
-                  10
-                </td>
-                {/* feedback */}
-                <td className="px-6 py-6 text-gray-400 bg-gray-700">
-                  12345678910111213141516171819202122232425
-                </td>
-              </tr>
+                <SpreadsheetRow></SpreadsheetRow>
+                <SpreadsheetRow></SpreadsheetRow>
+                <SpreadsheetRow></SpreadsheetRow>
+                <SpreadsheetRow></SpreadsheetRow>
+                <SpreadsheetRow></SpreadsheetRow>
             </tbody>
           </table>
       </div>

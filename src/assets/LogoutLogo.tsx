@@ -1,7 +1,7 @@
 const LogoutLogo = ({ fillColor = "white" }) => (
   <svg
-    width="30"
-    height="30"
+    width="25"
+    height="25"
     viewBox="0 0 120 120"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -18,7 +18,7 @@ const LogoutLogo = ({ fillColor = "white" }) => (
 
     {/* Porta ou retângulo representando o sistema */}
     <rect
-      x="30"
+      x="55"
       y="35"
       width="35"
       height="50"
@@ -28,9 +28,9 @@ const LogoutLogo = ({ fillColor = "white" }) => (
       strokeWidth="6"
     />
 
-    {/* Seta de saída */}
+    {/* Seta de saída para o lado esquerdo */}
     <path
-      d="M65 60 H95 M85 50 L95 60 L85 70"
+      d="M55 60 H25 M35 50 L25 60 L35 70"
       stroke={fillColor}
       strokeWidth="6"
       strokeLinecap="round"

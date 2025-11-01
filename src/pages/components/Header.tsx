@@ -1,11 +1,21 @@
 import DashboardLogo from "../../assets/DashboardLogo"
 import AddEmployeeLogo from "../../assets/AddEmployeeLogo"
-import LogoutLogo from "../../assets/LogOutLogo"
+import AddPopUp from "./AddPopUp"
+import { useState } from "react"
 
 function Header() {
+  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+
+  // ARROW FUNCTION PRA ABRIR E FECHAR O POPUP
+  const handleOpenPopUp = () => setIsPopUpOpen(true);
+  const handleClosePopUp = () => setIsPopUpOpen(false);
 
   return (
+
     <div className="flex flex-col p-4 bg-infinity-orange">
+
+      {/* AQUI ELE SÓ RENDERIZA O POPUP SE ELE ESTIVER ABERTO */}
+      {  isPopUpOpen && <AddPopUp onClose={handleClosePopUp}/>  }
 
         <div className="flex flex-row ml-2 mt-4">
           
@@ -20,30 +30,30 @@ function Header() {
 
         </div>
 
-        <div className="mt-10 ml-2">
+        <div className="mt-10 mx-2">
           <p className="text-[12px] text-white/70"> Principal </p>
 
           <nav className="flex flex-col mt-4 font-bold gap-2 text-white">
             {/* === COLOCAR HOVER AQUI E ACHAR MAIS LOGOS === */}
-            <div className="group flex flex-row group-hover:">
+            <a href="" className="hover:scale-105 hover:mb-y hover:bg-white/10 transition-all p-1 rounded-full">
+            <div className="flex flex-row">
               <DashboardLogo fillColor="white"></DashboardLogo>
-              <a href="" className="ml-2 flex justify-center items-center"> Dashboard </a>
+              <p className="ml-2 flex justify-center items-center"> Dashboard </p>
             </div>
+            </a>
 
+            <a
+            onClick={(e) => {e.preventDefault(); handleOpenPopUp();}}
+            href=""
+            className="hover:scale-105 hover:mb-y hover:bg-white/10 transition-all p-1 rounded-full">
             <div className="flex flex-row group-hover:">
               <AddEmployeeLogo fillColor="white"></AddEmployeeLogo>
-              <a href="" className="ml-2 flex justify-center items-center"> Add </a>
+              <p className="ml-2 flex justify-center items-center"> Add </p>
             </div>
+            </a>
           </nav>
-        </div>
 
-        <div className="border-t-2 border-white pt-2 mt-auto">
-          <div className="flex flex-row group-hover:">
-              <LogoutLogo fillColor="white"></LogoutLogo>
-              <a href="" className="ml-2 flex justify-center items-center font-bold text-white"> Logout </a>
-          </div>
         </div>
-
     </div>
   )
 }

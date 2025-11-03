@@ -29,7 +29,7 @@ function AddPopUp({onClose}: AddPopUpProps) {
     // 
     // o duration-300 faz a transição ficar smooth
     // 
-    <div onClick={handleClose} className={`flex fixed justify-center items-center backdrop-blur-sm h-full w-full transition-opacity duration-300 bg-black/30 ${isVisible ? "opacity-100" : "opacity-0"}`} >
+    <div onClick={handleClose} className={`flex fixed justify-center items-center h-full w-full transition-opacity duration-300 bg-black/30 backdrop-blur-sm ${isVisible ? "opacity-100" : "opacity-0"}`} >
 
       <div className="bg-white rounded-lg w-auto h-auto transform transition-transform duration-300 ease-out z-30">
         

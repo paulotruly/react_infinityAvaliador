@@ -29,23 +29,26 @@ function AddPopUp({onClose}: AddPopUpProps) {
     // 
     // o duration-300 faz a transição ficar smooth
     // 
-    <div onClick={handleClose} className={`flex fixed justify-center items-center backdrop-blur-sm min-h-screen w-full transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0"}`} >
+    <div onClick={handleClose} className={`flex fixed justify-center items-center backdrop-blur-sm h-full w-full transition-opacity duration-300 bg-black/30 ${isVisible ? "opacity-100" : "opacity-0"}`} >
 
-      <div className="bg-white w-auto h-auto
-      transform transition-transform duration-300 ease-out">
+      <div className="bg-white rounded-lg w-auto h-auto transform transition-transform duration-300 ease-out z-30">
         
-        <div className="flex flex-col p-4 bg-pink-300 w-[400px]">
+        <div  onClick={(e) => e.stopPropagation()}
+              className="flex flex-col w-[400px]">
 
-          <h3 className="bg-blue-200 my-2 text-lg">Registrar monitores</h3>
+          <div className="rounded-t-lg flex justify-center items-center p-2 w-full bg-infinity-orange">
+            <h3 className="my-2 text-lg text-white font-bold">Registrar monitores</h3>
+          </div>
 
-          <form className="w-full mt-2" action="">
-
-            <div className="flex flex-row p-2 border-2 border-black/10 rounded-full bg-white mb-2">
+          {/* -------------------- FORMULÁRIO -------------------- */}
+          <form className="w-full my-2 p-2 px-6 bg-white" action="">
+            
+            <div className="flex flex-row p-2 border-2 border-black/20 rounded-lg bg-white my-2">
               <span className="flex mr-4 ml-1 justify-center items-center"> 𖦹 </span>
               <input className="w-full" type="text" placeholder="Nome completo" />
             </div>
 
-            <div className="flex flex-row p-2 border-2 border-black/10 rounded-full bg-white mb-2">
+            <div className="flex flex-row p-2 border-2 border-black/20 rounded-lg bg-white my-2">
               <span className="flex mr-2 ml-1 justify-center items-center"> 𖦹 </span>
               <select name="seletorCategoria" id="seletorCategoria" className="w-full">
                 <option value=""disabled selected>
@@ -54,8 +57,17 @@ function AddPopUp({onClose}: AddPopUpProps) {
               </select>
             </div>
 
-          </form>
+            <div className="flex flex-row p-2 border-2 border-black/20 rounded-lg bg-white my-2">
+              <span className="flex mr-2 ml-1 justify-center items-center"> 𖦹 </span>
+              <select name="seletorCategoria" id="seletorCategoria" className="w-full">
+                <option value=""disabled selected>
+                Categoria
+                </option>
+              </select>
+            </div>
 
+          </form>
+          {/* -------------------- FORMULÁRIO -------------------- */}
         </div>
 
       </div>

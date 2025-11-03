@@ -31,9 +31,33 @@ function AddPopUp({onClose}: AddPopUpProps) {
     // 
     <div onClick={handleClose} className={`flex fixed justify-center items-center backdrop-blur-sm min-h-screen w-full transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0"}`} >
 
-      <div className="bg-white w-[100px] h-[100px]
+      <div className="bg-white w-auto h-auto
       transform transition-transform duration-300 ease-out">
-        oii
+        
+        <div className="flex flex-col p-4 bg-pink-300 w-[400px]">
+
+          <h3 className="bg-blue-200 my-2 text-lg">Registrar monitores</h3>
+
+          <form className="w-full mt-2" action="">
+
+            <div className="flex flex-row p-2 border-2 border-black/10 rounded-full bg-white mb-2">
+              <span className="flex mr-4 ml-1 justify-center items-center"> 𖦹 </span>
+              <input className="w-full" type="text" placeholder="Nome completo" />
+            </div>
+
+            <div className="flex flex-row p-2 border-2 border-black/10 rounded-full bg-white mb-2">
+              <span className="flex mr-2 ml-1 justify-center items-center"> 𖦹 </span>
+              <select name="seletorCategoria" id="seletorCategoria" className="w-full">
+                <option value=""disabled selected>
+                Unidade
+                </option>
+              </select>
+            </div>
+
+          </form>
+
+        </div>
+
       </div>
 
     </div>

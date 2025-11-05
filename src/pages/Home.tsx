@@ -1,30 +1,32 @@
 function Home() {
-
   return (
     <div className="flex flex-col min-h-screen bg-green-100">
 
-      <header className="flex flex-row justify-between items-center bg-gray-100 text-black h-24 px-10">
+      <header className="flex flex-row justify-between items-center bg-purple-600 text-black h-auto py-8 px-10">
         <h1 className="text-lg"> Avalia365 </h1>
-
         <nav>
           <a href=""> Login </a>
         </nav>
       </header>
 
-      <main className="flex-1 p-10 bg-pink-100">
-        <div className="flex flex-row bg-gray-200">
+      <div className="grid grid-cols-4 flex-1">
+        <div className="col-span-2 flex flex-col bg-yellow-600 justify-center items-center p-4">
+          <p className="text-[20px] text-center"> Insira aqui seu token de avaliação </p>
 
-          <div className="flex flex-col justify-center items-center mx-10 bg-orange-200">
-            <h2 className="text-lg text-center bg-blue-100 mb-6 max-w-xs"> Insira seu token aqui para que possamos realizar a avaliação </h2>
-            <input className="p-2 rounded-full" type="text"/>
+          <div className="flex flex-row gap-6 mt-6">
+            <input className="appearance-none p-2 rounded-lg" type="text"/>
+            <button className="p-2 bg-yellow-400 px-6 rounded-lg"> Enviar </button>
           </div>
 
-          <img className="flex-1 h-[400px] bg-yellow-200" src="" alt="" />
         </div>
-      </main>
+
+        <div className="flex justify-center items-center col-span-2 bg-blue-100">
+          
+        </div>
+      </div>
 
     </div>
   )
 }
 
-export default Home
+export default Home;

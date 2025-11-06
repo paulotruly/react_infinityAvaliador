@@ -1,3 +1,5 @@
+import TokenLogo from "../assets/TokenLogo";
+
 function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-green-100">
@@ -10,12 +12,7 @@ function Home() {
             <p className="absolute bottom-[30px] px-6 text-sm text-white font-light"> Muchemwa, S., & Dhiwayo, A. (2025). Efficacy of periodic students’ instructor evaluation to enhance lecturer’s performance: A content analysis. Midland State University, Zimbabwe & University of the Free State, South Africa. </p>
         </div>
 
-        <div className="col-span-3 flex flex-col bg-yellow-600 items-center justify-between">
-          <header className='flex flex-row justify-between items-center bg-purple-200 text-black h-auto w-full py-6 px-10'>
-            <nav>
-              <a href=""> Login </a>
-            </nav>
-          </header>
+        <div className="col-span-3 flex flex-col bg-yellow-600 items-center justify-center">
 
           <div className='flex flex-col justify-center items-center w-1/2 py-14 bg-blue-200'>
             <div className="mb-4">
@@ -25,8 +22,11 @@ function Home() {
             <p className="w-2/3 text-center leading-tight"> Digite seu token para iniciar a avaliação e nos contar sua experiência! Sua opinião faz toda a diferença e nos ajuda a evoluir a cada dia. </p>
 
             <div className="flex flex-row gap-6 mt-6">
-              <input className="appearance-none p-2 rounded-lg" type="text"/>
-              <button className="p-2 bg-yellow-400 px-6 rounded-lg"> Enviar </button>
+              <div className="flex flex-row justify-center items-center p-2 bg-white rounded-lg">
+                <span className="mx-2"> <TokenLogo fillColor="gray"></TokenLogo> </span>
+                <input className="appearance-none p-4 rounded-lg appearance-none" type="text" placeholder="0000"/>
+              </div>
+              <button className="p-2 bg-infinity-orange text-white px-6 rounded-lg"> Enviar </button>
             </div>
           </div>
 

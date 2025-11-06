@@ -1,8 +1,9 @@
 import TokenLogo from "../assets/TokenLogo";
+import LoginLogo from "../assets/LogInLogo";
 
 function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-green-100">
+    <div className="flex flex-col min-h-screen">
 
       <div className="grid grid-cols-4 flex-1">
 
@@ -13,8 +14,12 @@ function Home() {
         </div>
 
         <div className="col-span-3 flex flex-col bg-yellow-600 items-center justify-center">
+          
+          <div className="flex w-full bg-green-400 justify-end items-center">
+            <LoginLogo></LoginLogo>
+          </div>
 
-          <div className='flex flex-col justify-center items-center w-1/2 py-14 bg-blue-200'>
+          <div className='flex flex-col justify-center items-center w-1/2 py-14'>
             <div className="mb-4">
               <p className="text-[35px] font-extrabold text-center leading-tight"> Insira aqui seu token de avaliação </p>
             </div>

@@ -2,27 +2,38 @@ function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-green-100">
 
-      <header className="flex flex-row justify-between items-center bg-purple-600 text-black h-auto py-8 px-10">
-        <h1 className="text-lg"> Avalia365 </h1>
-        <nav>
-          <a href=""> Login </a>
-        </nav>
-      </header>
-
       <div className="grid grid-cols-4 flex-1">
-        <div className="col-span-2 flex flex-col bg-yellow-600 justify-center items-center p-4">
-          <p className="text-[20px] text-center"> Insira aqui seu token de avaliação </p>
 
-          <div className="flex flex-row gap-6 mt-6">
-            <input className="appearance-none p-2 rounded-lg" type="text"/>
-            <button className="p-2 bg-yellow-400 px-6 rounded-lg"> Enviar </button>
+        <div className="relative col-span-1 bg-infinity-orange">
+            <h1 className="absolute text-lg top-6 left-6 font-extrabold text-white"> Avalia365 </h1>
+            <p className="absolute bottom-[150px] px-6 text-white font-bold text-lg"> "A avaliação periódica de professores pelos estudantes ajuda a identificar pontos fortes e fracos do ensino, contribuindo para a melhoria da qualidade e do programa acadêmico." </p>
+            <p className="absolute bottom-[30px] px-6 text-sm text-white font-light"> Muchemwa, S., & Dhiwayo, A. (2025). Efficacy of periodic students’ instructor evaluation to enhance lecturer’s performance: A content analysis. Midland State University, Zimbabwe & University of the Free State, South Africa. </p>
+        </div>
+
+        <div className="col-span-3 flex flex-col bg-yellow-600 items-center justify-between">
+          <header className='flex flex-row justify-between items-center bg-purple-200 text-black h-auto w-full py-6 px-10'>
+            <nav>
+              <a href=""> Login </a>
+            </nav>
+          </header>
+
+          <div className='flex flex-col justify-center items-center w-1/2 py-14 bg-blue-200'>
+            <div className="mb-4">
+              <p className="text-[35px] font-extrabold text-center leading-tight"> Insira aqui seu token de avaliação </p>
+            </div>
+
+            <p className="w-2/3 text-center leading-tight"> Digite seu token para iniciar a avaliação e nos contar sua experiência! Sua opinião faz toda a diferença e nos ajuda a evoluir a cada dia. </p>
+
+            <div className="flex flex-row gap-6 mt-6">
+              <input className="appearance-none p-2 rounded-lg" type="text"/>
+              <button className="p-2 bg-yellow-400 px-6 rounded-lg"> Enviar </button>
+            </div>
           </div>
 
+          <div></div>
         </div>
 
-        <div className="flex justify-center items-center col-span-2 bg-blue-100">
-          
-        </div>
+
       </div>
 
     </div>

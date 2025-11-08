@@ -1,5 +1,5 @@
 import TokenLogo from "../assets/TokenLogo";
-// import LoginLogo from "../assets/LoginLogo"
+import LoginLogo from "../assets/LoginLogo"
 
 function Home() {
   return (
@@ -7,27 +7,29 @@ function Home() {
 
       <div className="grid grid-cols-4 flex-1">
 
-        <div className="bg-[url(./assets/background.jpg)] bg-center bg-cover bg-no-repeat col-span-3 relative flex flex-col justify-center items-center">
+        <div className="bg-[url(./assets/background.jpg)] bg-center bg-cover bg-no-repeat col-span-3 relative flex flex-col">
           
-          {/* <div className="flex w-full justify-end items-center pr-4 py-4 bg-green-400">
-            <a href="">
-              <LoginLogo fillColor="#c64132"></LoginLogo>
+          <div className="fixed flex w-full justify-start items-center pl-4 py-2 z-index-300">
+            <a className="bg-black rounded-full p-1" href="">
+              <LoginLogo fillColor="white"></LoginLogo>
             </a>
-          </div> */}
+          </div> 
 
-          <div className='absolute flex flex-col justify-center items-center w-1/2 py-14 mt-4 text-white bg-black/20 backdrop-blur-md bg-gradient-to-tr from-black/50 to-white/30 border-2 shadow-lg border-white/20 rounded-[20px]'>
-            <div className="mb-4">
-              <p className="text-[35px] font-extrabold text-center leading-tight"> Insira aqui seu token de avaliação </p>
-            </div>
-
-            <p className="w-2/3 text-center leading-tight"> Digite seu token para iniciar a avaliação e nos contar sua experiência! Sua opinião faz toda a diferença e nos ajuda a evoluir a cada dia. </p>
-
-            <div className="flex flex-row gap-6 mt-6">
-              <div className="flex flex-row justify-center items-center p-2 bg-white rounded-lg shadow-lg">
-                <span className="mx-2"> <TokenLogo fillColor="gray"></TokenLogo> </span>
-                <input className="appearance-none p-4 rounded-lg" type="text" placeholder="0000"/>
+          <div className="flex justify-center items-center h-full">
+            <div className='flex flex-col justify-center items-center w-1/2 py-14 mt-4 text-white bg-black/20 backdrop-blur-md bg-gradient-to-tr from-black/50 to-white/30 border-2 shadow-lg border-white/20 rounded-[20px]'>
+              <div className="mb-4">
+                <p className="text-[35px] font-extrabold text-center leading-tight"> Insira aqui seu token de avaliação </p>
               </div>
-              <button className="p-2 bg-infinity-orange text-white px-6 rounded-lg shadow-lg"> Enviar </button>
+
+              <p className="w-2/3 text-center leading-tight"> Digite seu token para iniciar a avaliação e nos contar sua experiência! Sua opinião faz toda a diferença e nos ajuda a evoluir a cada dia. </p>
+
+              <div className="flex flex-row gap-6 mt-6">
+                <div className="flex flex-row justify-center items-center p-2 bg-white rounded-lg shadow-lg">
+                  <span className="mx-2"> <TokenLogo fillColor="gray"></TokenLogo> </span>
+                  <input className="appearance-none p-4 rounded-lg" type="text" placeholder="0000"/>
+                </div>
+                <button className="p-2 bg-infinity-orange text-white px-6 rounded-lg shadow-lg"> Enviar </button>
+              </div>
             </div>
           </div>
 

@@ -1,5 +1,5 @@
 import TokenLogo from "../assets/TokenLogo";
-import LoginLogo from "../assets/LogInLogo";
+import LoginLogo from "../assets/LoginLogo"
 
 function Home() {
   return (
@@ -13,10 +13,12 @@ function Home() {
             <p className="absolute bottom-[30px] px-6 text-sm text-white font-light"> Muchemwa, S., & Dhiwayo, A. (2025). Efficacy of periodic students’ instructor evaluation to enhance lecturer’s performance: A content analysis. Midland State University, Zimbabwe & University of the Free State, South Africa. </p>
         </div>
 
-        <div className="col-span-3 flex flex-col bg-yellow-600 items-center justify-center">
+        <div className="col-span-3 flex flex-col bg-yellow-100 items-center">
           
-          <div className="flex w-full bg-green-400 justify-end items-center">
-            <LoginLogo></LoginLogo>
+          <div className="flex w-full justify-end items-center pr-4 pt-4">
+            <a href="">
+              <LoginLogo fillColor="#c64132"></LoginLogo>
+            </a>
           </div>
 
           <div className='flex flex-col justify-center items-center w-1/2 py-14'>
@@ -29,7 +31,7 @@ function Home() {
             <div className="flex flex-row gap-6 mt-6">
               <div className="flex flex-row justify-center items-center p-2 bg-white rounded-lg">
                 <span className="mx-2"> <TokenLogo fillColor="gray"></TokenLogo> </span>
-                <input className="appearance-none p-4 rounded-lg appearance-none" type="text" placeholder="0000"/>
+                <input className="appearance-none p-4 rounded-lg" type="text" placeholder="0000"/>
               </div>
               <button className="p-2 bg-infinity-orange text-white px-6 rounded-lg"> Enviar </button>
             </div>

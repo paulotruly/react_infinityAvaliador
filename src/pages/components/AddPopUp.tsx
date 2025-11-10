@@ -43,32 +43,40 @@ function AddPopUp({onClose}: AddPopUpProps) {
           {/* -------------------- FORMULÁRIO -------------------- */}
           <form className="w-full my-2 p-2 px-6 bg-white" action="">
             
-            <div className="flex flex-row p-2 border-2 border-black/20 rounded-lg bg-white my-2">
-              <span className="flex mr-4 ml-1 justify-center items-center"> 𖦹 </span>
-              <input className="w-full" type="text" placeholder="Nome completo" />
+            <div className="relative flex flex-row items-center">
+                <p className="top-[2px] left-[10px] absolute font-light text-gray-600 bg-white text-[12px] px-2"> NOME </p>
+                <div className="flex flex-row p-3 border-2 border-black/20 rounded-lg bg-white my-2 w-full">
+                    <input className="w-full focus:outline-none focus:ring-0" type="text" placeholder="Insira aqui"/>
+                </div>
             </div>
 
-            <div className="flex flex-row p-2 border-2 border-black/20 rounded-lg bg-white my-2">
-              <span className="flex mr-2 ml-1 justify-center items-center"> 𖦹 </span>
-              <select name="seletorCategoria" id="seletorCategoria" className="w-full">
-                <option value=""disabled selected>
-                Unidade
-                </option>
-              </select>
+            <div className="relative flex flex-row items-center">
+                <p className="top-[2px] left-[10px] absolute font-light text-gray-600 bg-white text-[12px] px-2"> UNIDADE </p>
+                <div className="flex flex-row p-3 border-2 border-black/20 rounded-lg bg-white my-2 w-full">
+                    <select name="seletorCategoria" id="seletorCategoria" className="w-full focus:outline-none focus:ring-0 text-gray-400">
+                        <option value="" disabled selected>
+                        Selecione a unidade
+                        </option>
+                    </select>
+                </div>
             </div>
 
-            <div className="flex flex-row p-2 border-2 border-black/20 rounded-lg bg-white my-2">
-              <span className="flex mr-2 ml-1 justify-center items-center"> 𖦹 </span>
-              <select name="seletorCategoria" id="seletorCategoria" className="w-full">
-                <option value=""disabled selected>
-                Categoria
-                </option>
-              </select>
+            <div className="relative flex flex-row items-center">
+                <p className="top-[2px] left-[10px] absolute font-light text-gray-600 bg-white text-[12px] px-2"> CATEGORIA </p>
+                <div className="flex flex-row p-3 border-2 border-black/20 rounded-lg bg-white my-2 w-full">
+                    <select name="seletorCategoria" id="seletorCategoria" className="w-full focus:outline-none focus:ring-0 text-gray-400">
+                        <option value="" disabled selected>
+                        Atrele uma categoria ao monitor
+                        </option>
+                    </select>
+                </div>
             </div>
 
-            <div className="flex flex-row justify-between mt-6">
-              <button className="bg-infinity-orange px-14 py-2 rounded-lg text-white"> Realizando avaliação </button>
-              <button className="bg-white border-2 text-infinity-orange border-infinity-orange px-8 py-2 rounded-lg">
+            <div className="flex flex-row justify-between mt-4">
+              <button className="bg-infinity-orange px-14 py-2 rounded-lg text-white"> Adicionar </button>
+              <button
+              onClick={handleClose}
+              className="bg-white border-2 text-infinity-orange border-infinity-orange px-8 py-2 rounded-lg">
                 Cancelar
               </button>
             </div>

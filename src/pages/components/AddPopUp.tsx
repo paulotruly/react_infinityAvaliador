@@ -67,7 +67,7 @@ function AddPopUp({onClose}: AddPopUpProps) {
             </div>
 
             <div className="flex flex-row justify-between mt-6">
-              <button className="bg-infinity-orange px-14 py-2 rounded-lg text-white"> Adicionar </button>
+              <button className="bg-infinity-orange px-14 py-2 rounded-lg text-white"> Realizando avaliação </button>
               <button className="bg-white border-2 text-infinity-orange border-infinity-orange px-8 py-2 rounded-lg">
                 Cancelar
               </button>

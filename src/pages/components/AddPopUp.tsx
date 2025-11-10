@@ -51,6 +51,21 @@ function AddPopUp({onClose}: AddPopUpProps) {
             </div>
 
             <div className="relative flex flex-row items-center">
+                <p className="top-[2px] left-[10px] absolute font-light text-gray-600 bg-white text-[12px] px-2"> USERNAME </p>
+                <div className="flex flex-row p-3 border-2 border-black/20 rounded-lg bg-white my-2 w-full">
+                    <span className="text-gray-400"> @ </span>
+                    <input className="w-full focus:outline-none focus:ring-0" type="text" placeholder="gustavosilveira"/>
+                </div>
+            </div>
+
+            <div className="relative flex flex-row items-center">
+                <p className="top-[2px] left-[10px] absolute font-light text-gray-600 bg-white text-[12px] px-2"> SENHA </p>
+                <div className="flex flex-row p-3 border-2 border-black/20 rounded-lg bg-white my-2 w-full">
+                    <input className="w-full focus:outline-none focus:ring-0" type="text" placeholder="Insira aqui"/>
+                </div>
+            </div>
+
+            <div className="relative flex flex-row items-center">
                 <p className="top-[2px] left-[10px] absolute font-light text-gray-600 bg-white text-[12px] px-2"> UNIDADE </p>
                 <div className="flex flex-row p-3 border-2 border-black/20 rounded-lg bg-white my-2 w-full">
                     <select name="seletorCategoria" id="seletorCategoria" className="w-full focus:outline-none focus:ring-0 text-gray-400">

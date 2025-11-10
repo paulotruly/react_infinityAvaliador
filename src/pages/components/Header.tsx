@@ -16,6 +16,7 @@ function Header() {
 
       {/* AQUI ELE SÓ RENDERIZA O POPUP SE ELE ESTIVER ABERTO */}
       {  isPopUpOpen && <AddPopUp onClose={handleClosePopUp}/>  }
+
         <div className="m-4">
           <div className="flex flex-row ml-2 mt-4 bg-infinity-orange">
             
@@ -46,11 +47,14 @@ function Header() {
               onClick={(e) => {e.preventDefault(); handleOpenPopUp();}}
               href=""
               className="hover:scale-105 hover:mb-y hover:bg-white/10 transition-all p-1 rounded-full">
+
               <div className="flex flex-row group-hover:">
                 <AddEmployeeLogo fillColor="white"></AddEmployeeLogo>
                 <p className="ml-2 flex justify-center items-center"> Add </p>
               </div>
+
               </a>
+              
             </nav>
           </div>
         </div>

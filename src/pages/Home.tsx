@@ -1,15 +1,27 @@
 import TokenLogo from "../assets/TokenLogo";
-import LoginLogo from "../assets/LoginLogo"
+import LoginLogo from "../assets/LoginLogo";
+import ReviewPopUp from "./components/ReviewPopUp";
+import { useState } from "react";
 
 function Home() {
+  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+
+  // ARROW FUNCTION PRA ABRIR E FECHAR O POPUP
+  const handleOpenPopUp = () => setIsPopUpOpen(true);
+  const handleClosePopUp = () => setIsPopUpOpen(false);
+
+
   return (
     <div className="flex flex-col min-h-screen">
+
+      {/* AQUI ELE SÓ RENDERIZA O POPUP SE ELE ESTIVER ABERTO */}
+      {  isPopUpOpen && <ReviewPopUp onClose={handleClosePopUp}/>  }
 
       <div className="grid grid-cols-4 flex-1">
 
         <div className="bg-[url(./assets/background.jpg)] bg-center bg-cover bg-no-repeat col-span-3 relative flex flex-col">
           
-          <div className="fixed flex w-full justify-start items-center pl-4 py-2 z-index-300">
+          <div className="fixed flex w-full justify-start items-center pl-4 py-2">
             <a className="bg-black rounded-full p-1" href="">
               <LoginLogo fillColor="white"></LoginLogo>
             </a>
@@ -28,7 +40,12 @@ function Home() {
                   <span className="mx-2"> <TokenLogo fillColor="gray"></TokenLogo> </span>
                   <input className="appearance-none p-4 rounded-lg" type="text" placeholder="0000"/>
                 </div>
-                <button className="p-2 bg-infinity-orange text-white px-6 rounded-lg shadow-lg"> Enviar </button>
+
+                <button onClick={(e) => {e.preventDefault(); handleOpenPopUp();}}
+                className="p-2 bg-infinity-orange text-white px-6 rounded-lg shadow-lg">
+                  Enviar
+                </button>
+
               </div>
             </div>
           </div>
